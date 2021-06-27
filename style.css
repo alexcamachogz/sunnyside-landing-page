@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&family=Fraunces:wght@700;900&display=swap');
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --yellow: hsl(51, 100%, 49%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --dark-blue-photography-text: hsl(198, 62%, 26%);
+  --dark-cyan-footer: hsl(168, 34%, 41%);
+  --dark-cyan-text: hsl(167, 40%, 24%);
+  --very-dark-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --soft-red: hsl(7, 99%, 70%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.8rem;
+}
+
+.title__text {
+  font-family: 'Fraunces', serif;
+  font-size: 3.6rem;
+  font-weight: 900;
+  letter-spacing: 1rem;
+  color: var(--white);
+  text-align: center;
+  line-height: 5rem;
+}
+
+.main__title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.secondary__title {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.text__link {
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:visited {
+  color: var(--dark-grayish-blue);
+}
+
+/* Header */
+.header {
+  background-image: url("./images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 600px;
+}
+
+.header .header__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .header__nav .nav__mobile-view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.header .nav__mobile-view .nav__hamburger {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.header .header__nav .nav__menu {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  list-style: none;
+  width: 90%;
+  padding: 4rem 0;
+  margin-top: 1.5rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity .3s ease-in-out;
+  border-radius: 2rem 0 2rem 2rem;
+}
+
+.header .header__nav .no__hidden {
+  visibility: visible;
+  opacity: 1;
+}
+
+.header .header__nav .nav__menu::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-right: 1.5rem solid var(--white);
+  border-top: 1.5rem solid transparent;
+  border-left: 1.5rem solid transparent;
+  border-bottom: 1.5rem solid var(--white);
+  position: absolute;
+  top: 9rem;
+  right: 1.9rem;
+}
+
+.header .header__nav .nav__menu .menu__link--marked {
+  background-color: var(--yellow);
+  text-transform: uppercase;
+  padding: 2rem 3rem;
+  border-radius: 5rem;
+}
+
+.header .header__nav .nav__menu .menu__link--marked .link{
+  color: var(--very-dark-blue);
+}
+
+.header .header__title {
+  position: relative;
+  bottom: 28rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
